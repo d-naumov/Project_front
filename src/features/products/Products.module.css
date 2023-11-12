@@ -1,4 +1,4 @@
-
+/* 
 .productList {
   list-style: none;
   padding: 0;
@@ -12,9 +12,10 @@
   border-radius: 8px;
   margin: 10px;
   padding: 10px;
-  flex: 0 0 calc(20% - 20px); /* Уменьшаем процент ширины */
+  flex: 0 0 calc(20% - 20px); 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 
@@ -25,12 +26,14 @@
 
 .imgContainer {
   margin-top: 10px;
+  overflow: hidden;
 }
 
 .image {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .buttonContainer {
@@ -53,19 +56,211 @@
 }
 @media (max-width: 768px) {
   .productCard {
-    margin: 15px; /* Уменьшаем отступы на более узких экранах */
-    width: 100%; /* Занимаем всю ширину экрана */
+    margin: 15px; 
+    width: 100%; 
+    overflow: hidden;
   }
 
   .imgContainer {
-    height: 200px; /* Уменьшаем высоту изображения на более узких экранах */
+    height: 200px;
+    overflow: hidden; 
   }
 
   .title {
-    width: 100%; /* Занимаем всю ширину для текста */
+    width: 100%; 
   }
 }
 @media (max-width: 768px) {
+  .productCard {
+    flex: 0 0 calc(100% - 20px);
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 428px) {
+  .productCard {
+    flex: 0 0 calc(50% - 20px);
+    overflow: hidden;
+  }
+}
+
+
+@media (device-width: 390px) and (device-height: 844px) and (orientation: portrait),
+       (device-width: 844px) and (device-height: 390px) and (orientation: landscape) {
+
+  .productCard {
+    flex: 0 0 calc(50% - 20px);
+    overflow: hidden;
+  }
+
+  .imgContainer {
+    height: 150px; 
+    overflow: hidden;
+  }
+
+  .title {
+    width: 100%; 
+  }
+}
+
+
+@media (device-width: 844px) and (device-height: 390px) and (orientation: portrait),
+       (device-width: 390px) and (device-height: 844px) and (orientation: landscape) {
+  
+  .productCard {
+    flex: 0 0 calc(100% - 20px);
+    overflow: hidden;
+  }
+
+  .imgContainer {
+    height: 200px; 
+    overflow: hidden;
+  }
+}
+@media (max-width: 700px) and (min-width: 400px) {
+  .productCard {
+    flex: 0 0 calc(50% - 20px);
+    overflow: hidden;
+  }
+
+  .imgContainer {
+    height: 150px; 
+    overflow: hidden;
+  }
+
+  .title {
+    width: 100%; 
+  }
+} */
+.productList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.productCard {
+  border: 1px solid #b9b8b8;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  flex: 0 0 calc(20% - 20px); /* Уменьшаем процент ширины */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.imgContainer {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.favoriteIcon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  fill: grey;
+  transition: fill 0.3s ease-in-out;
+}
+
+.favoriteIcon:hover {
+  fill: #da1f0a;
+}
+
+@media (max-width: 768px) {
+  .productCard {
+    margin: 15px;
+    width: 100%;
+  }
+
+  .imgContainer {
+    height: 200px;
+  }
+
+  .title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 428px) {
+  .productCard {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 700px) and (min-width: 429px) {
+  .productCard {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .imgContainer {
+    height: 150px;
+  }
+
+  .title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px), (max-width: 844px) and (min-width: 701px) {
+  .productCard {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .imgContainer {
+    height: 150px;
+  }
+
+  .title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 844px) and (min-width: 391px) {
+  .productCard {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  .imgContainer {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .productCard {
+    margin: 15px;
+    width: 100%;
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .imgContainer {
+    height: 200px;
+  }
+
+  .title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 428px) {
   .productCard {
     flex: 0 0 calc(100% - 20px);
   }
