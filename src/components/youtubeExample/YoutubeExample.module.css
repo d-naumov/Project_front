@@ -1,0 +1,98 @@
+.videoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(229, 231, 246);
+  list-style-type: none;
+  margin: 10;
+}
+
+.videoCard {
+  width: calc(33.333% - 20px); /* Определяем ширину карты для экранов, больших 992px */
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15px;
+  align-items: center;
+}
+
+
+.videoContainer {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* соотношение сторон видео (16:9) */
+  position: relative;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+.videoForm label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.videoForm input {
+  width: 80%; 
+  max-width: 500px; 
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videoForm button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%; 
+  max-width: 500px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.videoControls {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+.videoForm button:hover {
+  background-color: #45a049;
+}
+
+
+@media (max-width: 992px) {
+  .videoCard {
+    width: calc(50% - 20px); 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .videoCard {
+    width: calc(100% - 20px); 
+  }
+}

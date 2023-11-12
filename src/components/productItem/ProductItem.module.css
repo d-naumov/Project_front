@@ -1,0 +1,14 @@
+/* .productItemContainer {
+    padding: 20px;
+    border: 1px solid rgb(227, 225, 225);
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(4, 4, 4, 0.1);
+  } */
+  
+  .productImage {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 10px;
+  }

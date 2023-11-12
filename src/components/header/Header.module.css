@@ -1,0 +1,116 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #13eb0c;
+  color: white;
+  padding: 10px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.logoImage {
+  max-width: 100px;
+  height: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+}
+
+.greeting {
+  margin-right: 20px;
+}
+
+.loggedInLinks {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.link {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.link:hover {
+  color: #0a7bf3;
+}
+
+.loginButton {
+  background-color: #0a7bf5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  background-color: #0056b3;
+}
+
+.burgerIcon {
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 30px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 10px; /* отступ снизу для лучшего интервала */
+  }
+}
+@media (min-width: 769px) {
+  .burgerIcon {
+    display: none; /* Скрываем значок бургер-меню на десктопных экранах */
+  }
+
+  .links {
+    display: flex; /* Показываем ссылки на десктопных экранах */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .burgerIcon {
+    display: block; /* Показываем значок бургер-меню на адаптивных экранах */
+  }
+
+  .links {
+    display: none; /* Скрываем ссылки на адаптивных экранах */
+  }
+}

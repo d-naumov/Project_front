@@ -1,0 +1,31 @@
+.userList {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(229, 231, 246);
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  .userCard {
+    margin: 30px;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    align-items: center;
+
+  }
+  
+  .imgContainer {
+    height: 280px;
+    width: 180px;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
