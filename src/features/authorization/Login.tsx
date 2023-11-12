@@ -35,7 +35,7 @@ export default function Login(): JSX.Element {
 
   return (
     <>
-      <p> Подсказка: kminchelle, 0lelplR</p>
+      <p> Clue: kminchelle, 0lelplR</p>
       <Form fields={fields} onSubmit={(e) => {dispatch(login(e)); navigate('/')}} />
      
       {/* <form onSubmit={handleLogin}>
