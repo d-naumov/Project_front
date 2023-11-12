@@ -65,7 +65,7 @@ const Header: FC = () => {
       
       <div className={styles.logoContainer}>
         <div className={styles.logo}>
-          <img src="/images.jpg" alt="My App Logo" className={styles.logoImage} />
+          <img src="./images.jpg" alt="My App Logo" className={styles.logoImage} />
         </div>
         <div className={styles.burgerIcon} onClick={toggleBurgerMenu}>
           <div className={styles.bar}></div>
